@@ -1,0 +1,32 @@
+.burger-menu {
+  display: block;
+  z-index: 1000;
+}
+.container {
+  max-width: 90%;
+}
+nav {
+  position: relative;
+}
+ul.links {
+  display: none;
+}
+.navbar-menu {
+  font-size: 2rem;
+  color: #444;
+}
+.navbar-menu ul li {
+  margin: 1rem 0;
+}
+.navbar-menu ul li:hover {
+  color: var(--primary-color);
+}
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.overflow {
+  overflow: hidden;
+}

@@ -10,7 +10,8 @@ html {
   --primary-color: #f97171;
   --secondary-color: #385a7c;
   --primary-color--light: #f99192;
-  --section-bg: #e9e9e9;
+  --section-bg: linear-gradient(to top, #abbaab, #ffffff);
+  --container-width: 1200px;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -28,8 +29,13 @@ h4 {
 img {
   width: 100%;
 }
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
 .line {
-  width: 5%;
+  width: 5rem;
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   margin: 1rem auto;
@@ -74,16 +80,29 @@ ul {
 .highlight-text {
   color: var(--primary-color--light);
 }
+
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
+}
+.button {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 5px;
 }
 /* NAVBAR */
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 0;
+  color: #f1f1f1;
 }
 ul.links {
   display: flex;
@@ -93,11 +112,69 @@ ul.links li {
   font-size: 1.4rem;
   font-weight: 500;
   cursor: pointer;
-  color: #222;
+  color: inherit;
 }
 ul.links li:hover {
   color: var(--primary-color);
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  border-radius: 0 0 15px 15px;
+  padding: 0 10px;
+}
+.sticky + .showcase--inner {
+  padding: 25rem 0;
+}
+.sticky + .showcase-small--inner {
+  padding: 15rem 0;
+}
+.navbar-menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--section-bg);
+  display: none;
+  /* display: none; */
+}
+/* burger menu */
+.burger-menu {
+  display: inline-block;
+  cursor: pointer;
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 /* logo */
 .logo {
   font-family: "Lemonada", cursive;
@@ -105,7 +182,7 @@ ul.links li:hover {
   color: var(--primary-color);
 }
 .logo > span {
-  color: #555;
+  color: #333;
 }
 /* SHOWCASE */
 .showcase {
@@ -116,25 +193,29 @@ ul.links li:hover {
     url("./images/pexels-johannes-rapprich-769892.jpg");
   background-size: cover;
 }
-.showcase h1 {
+.showcase-small {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./images/about-us.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.showcase h1,
+.showcase-small--inner h1 {
   font-family: "Lemonada", cursive;
 }
 
 .showcase--inner {
-  margin-top: 20rem;
+  padding-top: 20rem;
 }
-.showcase--inner p {
-  color: #fff;
+.showcase-small--inner {
+  padding-top: 10rem;
 }
-.button--ca {
-  display: inline-block;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+.showcase--inner p,
+.showcase-small--inner p {
   color: #fff;
-  background-color: var(--primary-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .button--ca:hover {
@@ -266,10 +347,155 @@ ul.links li:hover {
   border: #222 solid 1px;
   color: #222;
 }
+
+/* --------------------------- ABOUT US PAGE ---------------------------  */
+/* INSTRUCTORS SECTION */
+.instructors {
+  text-align: center;
+}
+.instructors--gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.instructors--image {
+  border: 3px solid #333;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.instructors--gallery .instructor {
+  background: #e9e9e9;
+  padding: 2rem;
+  cursor: pointer;
+}
+.instructors--gallery .instructor > p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+.instructors--gallery .instructor > img {
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+/* TESTIMONIALS SECTION  */
+.testimonials {
+  text-align: center;
+  background: var(--section-bg);
+}
+.testimonials img {
+  width: 150px;
+  margin: 1rem;
+}
+.testimonials--testimonial,
+.testimonials--testimonial-right {
+  padding: 2rem 0;
+}
+.testimonial--inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+}
+/* --------------------------- CONTACT US PAGE ---------------------------  */
+.contact .container {
+  max-width: var(--container-width);
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+.contact--info {
+  flex-basis: 49%;
+  text-align: center;
+}
+.contact--info--row {
+  text-align: left;
+  padding: 0.75rem 0;
+  font-size: 1.2rem;
+}
+.contact--info--row i {
+  margin: 0 15px;
+}
+.contact--message {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+.contact--form {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 0.5rem;
+}
+.contact--form input,
+.contact--form textarea {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  resize: none;
+}
+.contact--form textarea {
+  grid-column-end: span 2;
+}
+.contact--form .button {
+  grid-column-end: span 2;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+.contact--form .button:hover {
+  opacity: 0.8;
+}
+#map {
+  flex-basis: 48%;
+}
 /* FOOTER */
-footer {
+/* footer {
   background: #333;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
   color: #f4f4f4;
+} */
+footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  padding: 1rem;
+}
+
+footer .contact-options {
+  display: flex;
+}
+footer .contact-options div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .contact-options i {
+  margin: 0 10px;
+}
+footer .contact-options div {
+  margin: 0 1rem;
+}
+footer .social-media {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+footer .social-media i {
+  margin: 0 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 7px;
+  transition: all 0.5s;
+}
+footer .social-media i:hover {
+  transform: scale(1.2);
+  background: var(--primary-color);
+  color: #fff;
 }
