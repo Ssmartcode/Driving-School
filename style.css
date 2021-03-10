@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 :root {
   --primary-color: #f97171;
   --secondary-color: #385a7c;
@@ -13,11 +11,12 @@ html {
   --section-bg: linear-gradient(to top, #abbaab, #ffffff);
   --container-width: 1200px;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   background: #f4f4f4;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 h1,
 h2,
@@ -33,6 +32,9 @@ a {
   text-decoration: none;
   font-size: inherit;
   color: inherit;
+}
+.wrapper {
+  overflow-x: hidden;
 }
 .line {
   width: 5rem;
@@ -117,6 +119,7 @@ ul.links li {
 ul.links li:hover {
   color: var(--primary-color);
 }
+/* STICKY NAV BAR */
 .sticky {
   position: fixed;
   top: 0;
@@ -474,12 +477,10 @@ footer .contact-options div {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 0 1rem;
 }
 footer .contact-options i {
   margin: 0 10px;
-}
-footer .contact-options div {
-  margin: 0 1rem;
 }
 footer .social-media {
   justify-self: flex-end;

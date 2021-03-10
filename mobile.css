@@ -1,3 +1,26 @@
+body {
+  font-size: 1rem;
+}
+
+nav {
+  position: relative;
+}
+ul.links {
+  display: none;
+}
+.button {
+  font-size: 1.2rem;
+  padding: 0.75rem 0.5rem;
+}
+.header--large {
+  font-size: 2rem;
+}
+.header--medium {
+  font-size: 1.5rem;
+}
+.large-text {
+  font-size: 1.3rem;
+}
 .burger-menu {
   display: block;
   z-index: 1000;
@@ -5,11 +28,10 @@
 .container {
   max-width: 90%;
 }
-nav {
-  position: relative;
-}
-ul.links {
-  display: none;
+
+/* NAVBAR */
+.logo {
+  font-size: 1.5rem;
 }
 .navbar-menu {
   font-size: 2rem;
@@ -30,3 +52,136 @@ ul.links {
 .overflow {
   overflow: hidden;
 }
+
+/* SHOWCASE */
+.showcase--inner {
+  padding-top: 13rem;
+}
+.showcase-small--inner {
+  padding-top: 7rem;
+}
+/* STICKY NAV BAR */
+.sticky + .showcase--inner {
+  padding: 18rem 0;
+}
+.sticky + .showcase-small--inner {
+  padding: 12rem 0;
+}
+/* LEARNING PROCESS */
+.learning-process {
+  text-align: center;
+}
+.learning-process--row {
+  flex-direction: column;
+  margin: 0;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.learning-process--box {
+  padding: 2rem;
+  border: #333 solid 2px;
+  border-radius: 5%;
+  margin: 1rem 0;
+  display: flex;
+  flex: 1;
+  text-align: justify;
+  background-color: #e9e9e9;
+}
+.learning-process--box-icon {
+  color: var(--secondary-color);
+  align-self: center;
+}
+.learning-process--box-icon::after {
+  content: " ";
+  border: solid 2px var(--primary-color--light);
+  margin: 1rem;
+}
+/* FACILITIES */
+.facilities--showcase {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.facilities--images-box {
+  text-align: center;
+}
+
+.facilities--images-box img {
+  width: 220px;
+  height: 150px;
+  border-radius: 0;
+}
+.facilities--showcase img:nth-child(2) {
+  position: static;
+}
+/* PRICES */
+.prices--container {
+  flex-flow: column;
+}
+.prices--price-card {
+  margin: 1rem 0;
+}
+/* INSTRUCTORS */
+.instructors--gallery {
+  grid-template-columns: 1fr;
+}
+/* CONTACT */
+.contact .container {
+  flex-direction: column;
+  align-items: center;
+}
+.contact--form {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .contact-options {
+  flex-flow: column;
+  margin: 1rem 0;
+}
+footer .contact-options div {
+  justify-content: center;
+  margin: 0.25rem 0;
+}
+footer .contact-options i {
+  margin: 0 0.25rem;
+}
+
+@media screen and (max-height: 660px) {
+  .button {
+    font-size: 1.1rem;
+    padding: 0.75rem 0.5rem;
+  }
+  .header--large {
+    font-size: 1.8rem;
+  }
+  .header--medium {
+    font-size: 1.4rem;
+  }
+  .large-text {
+    font-size: 1.2rem;
+  }
+  /* SHOWCASE */
+  .showcase--inner {
+    padding-top: 5rem;
+  }
+  .showcase-small--inner {
+    padding-top: 4rem;
+  }
+  /* STICKY NAV BAR */
+  .sticky + .showcase--inner {
+    padding: 10rem 0;
+  }
+  .sticky + .showcase-small--inner {
+    padding: 8rem 0;
+  }
+} ;
