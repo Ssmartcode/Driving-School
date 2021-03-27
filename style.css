@@ -33,6 +33,34 @@ a {
   font-size: inherit;
   color: inherit;
 }
+/* ---on scroll effects--- */
+.hidden {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.scale-down {
+  transform: scale(0);
+}
+.scale {
+  transform: scale(1);
+}
+.rotate {
+  transform: rotateY(180deg);
+}
+.slide-left {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slide-right {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+/* ---utilities---- */
 .wrapper {
   overflow-x: hidden;
 }
@@ -184,25 +212,24 @@ ul.links li:hover {
   font-size: 2rem;
   color: var(--primary-color);
 }
-.logo > span {
-  color: #333;
-}
+
 /* SHOWCASE */
 .showcase {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./images/pexels-johannes-rapprich-769892.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/hero-mainpage.jpg");
   background-size: cover;
 }
 .showcase-small {
   position: relative;
   width: 100vw;
   height: 70vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./images/about-us.jpg");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .showcase h1,
@@ -232,6 +259,7 @@ ul.links li:hover {
 .learning-process--row {
   display: flex;
   justify-content: center;
+  transition: all 0.7s;
 }
 .learning-process--box {
   padding: 2rem;
@@ -277,6 +305,7 @@ ul.links li:hover {
   /* border: #f4f4f4 3px solid; */
   border-radius: 50%;
   object-fit: cover;
+  transition: 0.5s all;
 }
 .facilities--images-box {
   position: relative;
@@ -308,6 +337,7 @@ ul.links li:hover {
 .prices--container {
   display: flex;
   justify-content: center;
+  transition: 0.7s all;
 }
 .prices--price-card {
   border: 2px #f1f1f1 solid;
@@ -361,23 +391,45 @@ ul.links li:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.instructors--image {
-  border: 3px solid #333;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.instructors--gallery .instructor {
+.instructors--gallery .card {
   background: #e9e9e9;
   padding: 2rem;
-  cursor: pointer;
 }
 .instructors--gallery .instructor > p {
   padding-top: 1rem;
   font-size: 1.2rem;
 }
-.instructors--gallery .instructor > img {
+/* instructor fliping effect */
+.instructor {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 15px;
+}
+.instructor:hover .instructor--inner {
+  transform: rotateY(180deg);
+}
+.instructor--inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+}
+.instructor--inner-face,
+.instructor--inner-back {
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.4);
+  background: #f4f4f4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.instructor--inner-back {
+  transform: rotateY(-180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* TESTIMONIALS SECTION  */
@@ -392,7 +444,9 @@ ul.links li:hover {
 .testimonials--testimonial,
 .testimonials--testimonial-right {
   padding: 2rem 0;
+  transition: all 1.5s;
 }
+
 .testimonial--inner {
   display: flex;
   justify-content: space-between;
@@ -451,14 +505,6 @@ ul.links li:hover {
   flex-basis: 48%;
 }
 /* FOOTER */
-/* footer {
-  background: #333;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  color: #f4f4f4;
-} */
 footer {
   background-color: #333;
   color: #fff;
