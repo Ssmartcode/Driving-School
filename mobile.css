@@ -60,60 +60,7 @@ ul.links {
 .showcase-small--inner {
   padding-top: 7rem;
 }
-/* STICKY NAV BAR */
-.sticky + .showcase--inner {
-  padding: 18rem 0;
-}
-.sticky + .showcase-small--inner {
-  padding: 12rem 0;
-}
-/* LEARNING PROCESS */
-.learning-process {
-  text-align: center;
-}
-.learning-process--row {
-  flex-direction: column;
-  margin: 0;
-  margin-top: 4rem;
-  justify-content: center;
-  align-items: center;
-}
-.learning-process--box {
-  padding: 2rem;
-  border: #333 solid 2px;
-  border-radius: 5%;
-  margin: 1rem 0;
-  display: flex;
-  flex: 1;
-  text-align: justify;
-  background-color: #e9e9e9;
-}
-.learning-process--box-icon {
-  color: var(--secondary-color);
-  align-self: center;
-}
-.learning-process--box-icon::after {
-  content: " ";
-  border: solid 2px var(--primary-color--light);
-  margin: 1rem;
-}
-/* FACILITIES */
-.facilities--showcase {
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-.facilities--images-box {
-  text-align: center;
-}
 
-.facilities--images-box img {
-  width: 220px;
-  height: 150px;
-  border-radius: 0;
-}
-.facilities--showcase img:nth-child(2) {
-  position: static;
-}
 /* PRICES */
 .prices--container {
   flex-flow: column;
@@ -184,4 +131,4 @@ footer .contact-options i {
   .sticky + .showcase-small--inner {
     padding: 8rem 0;
   }
-} ;
+}

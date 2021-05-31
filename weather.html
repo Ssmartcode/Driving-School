@@ -15,7 +15,6 @@
       href="mobile.css"
       media="screen and (max-width:1200px)"
     />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap"
@@ -27,14 +26,6 @@
     />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <script
-      src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"
-      defer
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
-    />
     <script src="./script.js" defer></script>
     <title>DrivinAwesome--Driving School</title>
   </head>
@@ -67,52 +58,42 @@
         </nav>
         <!-- showcase inner -->
         <div class="showcase-small--inner container">
-          <h1 class="header--light header--large m-1">Contact Us</h1>
+          <h1 class="header--light header--large m-1">
+            Check the weather conditions
+          </h1>
           <p class="large-text m-1">
-            Find us on Lorem ipsum dolor sit amet. Or use our email addres or
-            phone number
+            Check the weather and schedule your driving lessons so you cover
+            every weather condition
           </p>
         </div>
       </div>
-      <!-- CONTACT SECTION -->
-      <section class="contact p-4">
-        <div class="container">
-          <div class="contact--info">
-            <h1>Find Us here</h1>
-            <div class="line"></div>
-            <div class="contact--info--row">
-              <p><i class="fas fa-map-marker-alt"></i>23 Avenue 0089</p>
-            </div>
-            <div class="contact--info--row">
-              <p><i class="fas fa-phone"></i>074123456</p>
-            </div>
-            <div class="contact--info--row">
-              <p><i class="fas fa-envelope-open"></i>awesome@driving.com</p>
-            </div>
-          </div>
-          <div class="contact--message">
-            <h1>Send us a message</h1>
-            <div class="line"></div>
-            <form class="contact--form p-2">
-              <input id="contactName" type="text" placeholder="Name" />
-              <input id="contactEmail" type="email" placeholder="E-mail" />
-              <input
-                id="contactPhone"
-                type="number"
-                placeholder="Phone number"
-              />
-              <input id="contactSubject" type="text" placeholder="Subject" />
-              <textarea
-                id="contactMessage"
-                cols="30"
-                rows="10"
-                placeholder="Message"
-              ></textarea>
-              <button class="button">Send</button>
-            </form>
+
+      <section class="weather p-4">
+        <h1 class="header--dark header--medium">
+          Check the weather conditions
+        </h1>
+        <div class="line"></div>
+        <div class="container p-2">
+          <p>
+            Weather is an important factor when driving your car. Fog can be a
+            problem because it reduces the visibility and rain and snow could
+            make the car unstable. It is important to know as a learner to deal
+            with all the weather conditions. Check the weather and schedule your
+            driving lessons so you cover every weather condition (if possible)
+          </p>
+          <div class="weather-list row p-4">
+            <!-- <div class="card">
+              <div class="date">23.02.2021</div>
+              <div class="temperature">
+                <span><strong>Min:</strong> 23</span>
+                <span><strong>Max:</strong> 32</span>
+              </div>
+              <div class="description">Very sunny and very nice</div>
+            </div> -->
           </div>
         </div>
       </section>
+
       <!-- FOOTER -->
       <footer>
         <div class="contact-options">
