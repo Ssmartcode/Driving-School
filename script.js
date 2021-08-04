@@ -64,7 +64,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    root: null,
+    root: document.body,
     threshold: [0.7],
   }
 );

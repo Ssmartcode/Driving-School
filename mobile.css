@@ -132,3 +132,14 @@ footer .contact-options i {
     padding: 8rem 0;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .instructor {
+    width: 230px;
+  }
+  .instructor--inner-face,
+  .instructor--inner-back {
+    border-radius: 50%;
+    background-color: transparent;
+  }
+}
