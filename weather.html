@@ -1,88 +1,76 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="mobile.css"
-      media="screen and (max-width:1200px)"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <script src="./script.js" defer></script>
-    <title>DrivinAwesome--Driving School</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- MOBILE MENU -->
-      <div class="navbar-menu">
-        <ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width:1200px)" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <title>DrivinAwesome--Driving School</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- MOBILE MENU -->
+    <div class="navbar-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="weather.html">Weather</a></li>
+      </ul>
+    </div>
+    <!-- NAV -->
+    <div class="showcase-small">
+      <nav class="container">
+        <span class="logo">Driving <span> Awesome</span></span>
+        <ul class="links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="weather.html">Weather</a></li>
         </ul>
-      </div>
-      <!-- NAV -->
-      <div class="showcase-small">
-        <nav class="container">
-          <span class="logo">Driving <span> Awesome</span></span>
-          <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="weather.html">Weather</a></li>
-          </ul>
-          <div class="burger-menu">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
-        </nav>
-        <!-- showcase inner -->
-        <div class="showcase-small--inner container">
-          <h1 class="header--light header--large m-1">
-            Check the weather conditions
-          </h1>
-          <p class="large-text m-1">
-            Check the weather and schedule your driving lessons so you cover
-            every weather condition
-          </p>
+        <div class="burger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
-      </div>
-
-      <section class="weather p-4">
-        <h1 class="header--dark header--medium">
+      </nav>
+      <!-- showcase inner -->
+      <div class="showcase-small--inner container">
+        <h1 class="header--light header--large m-1">
           Check the weather conditions
         </h1>
-        <div class="line"></div>
-        <div class="container p-2">
-          <p>
-            Weather is an important factor when driving your car. Fog can be a
-            problem because it reduces the visibility and rain and snow could
-            make the car unstable. It is important to know as a learner to deal
-            with all the weather conditions. Check the weather and schedule your
-            driving lessons so you cover every weather condition (if possible)
-          </p>
-          <div class="weather-list row p-4">
-            <!-- <div class="card">
+        <p class="large-text m-1">
+          Check the weather and schedule your driving lessons so you cover
+          every weather condition
+        </p>
+      </div>
+    </div>
+
+    <section class="weather p-4">
+      <h1 class="header--dark header--medium">
+        Check the weather conditions
+      </h1>
+      <div class="line"></div>
+      <div class="container">
+        <p>
+          Weather is an important factor when driving your car. Fog can be a
+          problem because it reduces the visibility and rain and snow could
+          make the car unstable. It is important to know as a learner to deal
+          with all the weather conditions. Check the weather and schedule your
+          driving lessons so you cover every weather condition (if possible)
+        </p>
+        <div class="weather-list row pt-4">
+          <!-- <div class="card">
               <div class="date">23.02.2021</div>
               <div class="temperature">
                 <span><strong>Min:</strong> 23</span>
@@ -90,33 +78,35 @@
               </div>
               <div class="description">Very sunny and very nice</div>
             </div> -->
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FOOTER -->
-      <footer>
-        <div class="contact-options">
-          <div>
-            <i class="fas fa-phone-square"></i>
-            <p>0740123456</p>
-          </div>
-          <div>
-            <i class="fas fa-envelope"></i>
-            <p>driving@awesome.com</p>
-          </div>
-          <div>
-            <i class="fas fa-map-marker-alt"> </i>
-            <p>23 Avenue 0089</p>
-          </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="contact-options">
+        <div>
+          <i class="fas fa-phone-square"></i>
+          <p>0740123456</p>
         </div>
+        <div>
+          <i class="fas fa-envelope"></i>
+          <p>driving@awesome.com</p>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"> </i>
+          <p>23 Avenue 0089</p>
+        </div>
+      </div>
 
-        <div class="social-media">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-linkedin"></i>
-        </div>
-      </footer>
-    </div>
-  </body>
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./js/script.js"></script>
+</body>
+
 </html>

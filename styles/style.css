@@ -100,6 +100,9 @@ a {
 .p-4 {
   padding: 4rem 0;
 }
+.pt-4 {
+  padding-top: 4rem;
+}
 ul {
   list-style: none;
 }
@@ -259,7 +262,7 @@ ul.links li:hover {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./images/hero-mainpage.jpg");
+    url("../images/hero-mainpage.jpg");
   background-size: cover;
 }
 .showcase-small {
@@ -267,7 +270,7 @@ ul.links li:hover {
   width: 100vw;
   height: 70vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./images/about-us.jpg");
+    url("../images/about-us.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,3 +1,5 @@
+import observers from "./observers.js";
+
 const navbar = document.querySelector("nav");
 const mainShowcase = document.querySelector(".showcase");
 const smallShowcase = document.querySelector(".showcase-small");
@@ -44,30 +46,8 @@ const instructors = document.querySelector(".instructors--gallery");
 console.log(instructors);
 const testimonials = document.querySelectorAll(".testimonial");
 
-const observer = new IntersectionObserver(
-  (entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        if (entry.target === learningProcess || entry.target === prices)
-          entry.target.classList.add("visible");
-        if (entry.target.classList.contains("scale-down"))
-          entry.target.classList.add("scale");
-        if (entry.target === instructors);
-        {
-          document
-            .querySelectorAll(".instructor--inner")
-            .forEach((instructor) => {
-              instructor.classList.remove("rotate");
-            });
-        }
-      }
-    });
-  },
-  {
-    root: document.body,
-    threshold: [0.7],
-  }
-);
+// observers
+const { observer, testimonialObserver } = observers;
 if (
   window.location.pathname.includes("/index.html") ||
   window.location.pathname === "/"
@@ -88,20 +68,6 @@ if (window.location.pathname.includes("/about.html")) {
   //observer on instructors flipping cards
   observer.observe(instructors);
 
-  //observer on testimonials
-  const testimonialObserver = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting)
-          entry.target.classList.remove("slide-left", "slide-right");
-      });
-    },
-    {
-      root: null,
-      threshold: 0,
-    }
-  );
-
   testimonials.forEach((testimonial) => {
     testimonialObserver.observe(testimonial);
   });
@@ -121,9 +87,9 @@ if (window.location.pathname.includes("/weather.html")) {
 
     const sevenDaysForecast = daily.map((currentDay) => {
       // Date dd-mm-yyyy
-      date = new Date(currentDay.dt * 1000);
-      day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-      month =
+      const date = new Date(currentDay.dt * 1000);
+      const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+      const month =
         date.getMonth() < 9 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
       const formatedDate = `${day}.${month}.${date.getFullYear()}`;
 

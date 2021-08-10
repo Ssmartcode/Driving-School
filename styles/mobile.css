@@ -28,6 +28,9 @@ ul.links {
 .container {
   max-width: 90%;
 }
+.rotate {
+  transform: rotateY(0deg);
+}
 
 /* NAVBAR */
 .logo {

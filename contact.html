@@ -1,141 +1,112 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="mobile.css"
-      media="screen and (max-width:1200px)"
-    />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <script
-      src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"
-      defer
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
-    />
-    <script src="./script.js" defer></script>
-    <title>DrivinAwesome--Driving School</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- MOBILE MENU -->
-      <div class="navbar-menu">
-        <ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width:1200px)" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <title>DrivinAwesome--Driving School</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- MOBILE MENU -->
+    <div class="navbar-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="weather.html">Weather</a></li>
+      </ul>
+    </div>
+    <!-- NAV -->
+    <div class="showcase-small">
+      <nav class="container">
+        <span class="logo">Driving <span> Awesome</span></span>
+        <ul class="links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="weather.html">Weather</a></li>
         </ul>
+        <div class="burger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </nav>
+      <!-- showcase inner -->
+      <div class="showcase-small--inner container">
+        <h1 class="header--light header--large m-1">Contact Us</h1>
+        <p class="large-text m-1">
+          Find us on Lorem ipsum dolor sit amet. Or use our email addres or
+          phone number
+        </p>
       </div>
-      <!-- NAV -->
-      <div class="showcase-small">
-        <nav class="container">
-          <span class="logo">Driving <span> Awesome</span></span>
-          <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="weather.html">Weather</a></li>
-          </ul>
-          <div class="burger-menu">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
-        </nav>
-        <!-- showcase inner -->
-        <div class="showcase-small--inner container">
-          <h1 class="header--light header--large m-1">Contact Us</h1>
-          <p class="large-text m-1">
-            Find us on Lorem ipsum dolor sit amet. Or use our email addres or
-            phone number
-          </p>
-        </div>
-      </div>
-      <!-- CONTACT SECTION -->
-      <section class="contact p-4">
-        <div class="container">
-          <div class="contact--info">
-            <h1>Find Us here</h1>
-            <div class="line"></div>
-            <div class="contact--info--row">
-              <p><i class="fas fa-map-marker-alt"></i>23 Avenue 0089</p>
-            </div>
-            <div class="contact--info--row">
-              <p><i class="fas fa-phone"></i>074123456</p>
-            </div>
-            <div class="contact--info--row">
-              <p><i class="fas fa-envelope-open"></i>awesome@driving.com</p>
-            </div>
-          </div>
-          <div class="contact--message">
-            <h1>Send us a message</h1>
-            <div class="line"></div>
-            <form class="contact--form p-2">
-              <input id="contactName" type="text" placeholder="Name" />
-              <input id="contactEmail" type="email" placeholder="E-mail" />
-              <input
-                id="contactPhone"
-                type="number"
-                placeholder="Phone number"
-              />
-              <input id="contactSubject" type="text" placeholder="Subject" />
-              <textarea
-                id="contactMessage"
-                cols="30"
-                rows="10"
-                placeholder="Message"
-              ></textarea>
-              <button class="button">Send</button>
-            </form>
-          </div>
-        </div>
-      </section>
-      <!-- FOOTER -->
-      <footer>
-        <div class="contact-options">
-          <div>
-            <i class="fas fa-phone-square"></i>
-            <p>0740123456</p>
-          </div>
-          <div>
-            <i class="fas fa-envelope"></i>
-            <p>driving@awesome.com</p>
-          </div>
-          <div>
-            <i class="fas fa-map-marker-alt"> </i>
-            <p>23 Avenue 0089</p>
-          </div>
-        </div>
-
-        <div class="social-media">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-linkedin"></i>
-        </div>
-      </footer>
     </div>
-  </body>
+    <!-- CONTACT SECTION -->
+    <section class="contact p-4">
+      <div class="container">
+        <div class="contact--info">
+          <h1>Find Us here</h1>
+          <div class="line"></div>
+          <div class="contact--info--row">
+            <p><i class="fas fa-map-marker-alt"></i>23 Avenue 0089</p>
+          </div>
+          <div class="contact--info--row">
+            <p><i class="fas fa-phone"></i>074123456</p>
+          </div>
+          <div class="contact--info--row">
+            <p><i class="fas fa-envelope-open"></i>awesome@driving.com</p>
+          </div>
+        </div>
+        <div class="contact--message">
+          <h1>Send us a message</h1>
+          <div class="line"></div>
+          <form class="contact--form p-2">
+            <input id="contactName" type="text" placeholder="Name" />
+            <input id="contactEmail" type="email" placeholder="E-mail" />
+            <input id="contactPhone" type="number" placeholder="Phone number" />
+            <input id="contactSubject" type="text" placeholder="Subject" />
+            <textarea id="contactMessage" cols="30" rows="10" placeholder="Message"></textarea>
+            <button class="button">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="contact-options">
+        <div>
+          <i class="fas fa-phone-square"></i>
+          <p>0740123456</p>
+        </div>
+        <div>
+          <i class="fas fa-envelope"></i>
+          <p>driving@awesome.com</p>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"> </i>
+          <p>23 Avenue 0089</p>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./js/script.js"></script>
+</body>
+
 </html>
